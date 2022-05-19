@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dog Shelter - Contacto</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/estilos.css">
+	<script src="https://kit.fontawesome.com/a0d20ff9bd.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet"> 
+</head>
+<body>	
+	<header id="header">	
+		<ul> 
+			<li><a href="../index.html">Home</a> </li>
+			<li><a href="nosotros.html">Nosotros</a></li>
+			<li><a href="una_nueva_oportunidad.html">Una nueva Oportunidad</a></li>	
+			<li><a href="preguntas_frecuentes.html">Preguntas Frecuentes</a></li>
+			<li><a href="contacto.html">Contacto</a></li>	
+		</ul>
+	</header>
+	<div class="nombre-pagina">
+		<h1>Contacto</h1>
+	</div>
+	<div class="inicio-final">
+		<a href="contacto.html#footer">Ir al final</a>
+	</div>
+	<div class="formulario">
+		<form action="contacto.html" method="GET" enctype="">
+			<input type="text" name="nombre" placeholder="Nombre">
+			<input type="password" name="contraseña" placeholder="Contraseña">
+			<input type="text" name="mail" placeholder="Email">
+			
+			<label for="adop" class="elegir">Adopcion</label>
+			<input type="checkbox" name="inscripcion_a" id="adop" value="adopcion" class="elegir">
+			<label for="tran" class="elegir">Transito</label>
+			<input type="checkbox" name="inscripcion_b" id="tran" value="transito" class="elegir">
+			<label for="vol" class="elegir">Voluntariado</label>
+			<input type="checkbox" name="inscripcion_c" id="vol" value="voluntario" class="elegir">
+			<label for="pad" class="elegir">Apadrinar</label>
+			<input type="checkbox" name="inscripcion_d" id="pad" value="padrine" class="elegir">
+			
+			<select>
+				<option value="ar">Argentina</option>		
+				<option value="br">Brasil</option>
+				<option value="cl">Chile</option>
+				<option value="col">Colombia</option>
+				<option value="mex">Mexico</option>
+				<option value="pe">Peru</option>
+				<option value="usa">Estados Unidos</option>
+				<option value="ca">Canada</option>
+			</select>
+			
+			<div>
+				<label for="com">Comentario</label>
+				<textarea name="comentario" id="com">
+				
+				</textarea>
+			</div>	
+			<input type="submit" name="enviar" value="enviar">
+			<input type="reset" name="limpiar" value="limpiar">
+		</form>
+	</div>
+	<div class="inicio-final">
+		<a href="contacto.html#header">Ir a arriba</a>
+	</div>
+	<footer id="footer">
+		<h3>Seguinos!</h3>
+		<div class="redesociales"> 
+			<i class="fa-solid fa-envelope"></i>
+			<i class="fa-brands fa-instagram"></i>
+			<i class="fa-brands fa-facebook"></i>
+			<i class="fa-brands fa-twitter"></i>
+		</div>
+		<div class="frase">
+			<p>Adopta,Transita, Involucrate, no te vas a arrepentir</p>
+		</div>
+	</footer>
+</body>
+</html>

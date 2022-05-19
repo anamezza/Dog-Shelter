@@ -1,0 +1,380 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+.index-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"header header"
+	"nombre-pagina nombre-pagina"
+	"inicio-final inicio-final"
+	"portada portada"
+	"datos datos"
+	"inicio-final2 inicio-final2"
+	"footer footer";
+}
+
+.nosotros-content {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-areas: 
+	"header header"
+	"nombre-pagina nombre-pagina"
+	"inicio-final inicio-final"
+	"portada-nosotros portada-nosotros"
+	"info info"
+	"ya-te-enamoraste ya-te-enamoraste"
+	"inicio-final2 inicio-final2"
+	"footer footer";
+}	
+
+header {
+	background-color: white;
+	height: auto;
+	width: 100%;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	grid-area: header;
+}
+
+header ul {
+	list-style: none;
+}
+
+header ul li {
+	display: inline-flex;
+	margin: 0.2vw;
+}
+
+header ul li a {
+	text-decoration: none;
+	color: black;
+	padding: 0.3vw;
+	cursor: pointer;
+}
+
+header ul li a:hover {
+	color: #818181;
+	opacity: 0.6;
+	background-color: transparent;
+}
+
+.nombre-pagina {
+	width: auto;
+	height: auto;
+	padding: 2vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ff009a;
+	grid-area: nombre-pagina;
+}
+
+.nombre-pagina h1 {
+	font-weight: bold;
+	color: white;
+	font-family: "Montserrat", sans-serif;
+}
+
+.inicio-final {
+	margin: 2vw;
+	grid-area: inicio-final;
+	height: auto;
+	width: auto;
+}
+
+.inicio-final a{
+	text-decoration: none;	
+	color: black;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.inicio-final a:hover {
+	color: #818181;
+	opacity: 0.6;
+	background-color: transparent;
+}
+
+.inicio-final2 {
+	margin: 2vw;
+	grid-area: inicio-final2;
+}
+
+.inicio-final2 a{
+	text-decoration: none;	
+	color: black;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+.inicio-final2 a:hover {
+	color: #818181;
+	opacity: 0.6;
+	background-color: transparent;
+}
+
+.portada {
+	width: 100%;
+	grid-area: portada;
+	height: auto;
+}
+
+.portada img {
+	width: 100%;
+	height: 40vw;
+}
+
+.portada-nosotros {
+	width: 100%;
+	grid-area: portada-nosotros;
+}
+
+.portada-nosotros h2 {
+	font-family: "Montserrat", sans-serif;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.portada-nosotros img {
+	width: 100%;
+	height: 50vw;
+}
+
+.ya-te-enamoraste {
+	width: 100%;
+	grid-area: ya-te-enamoraste;
+	height: auto;
+}
+
+.ya-te-enamoraste h2 {
+	font-family: "Montserrat", sans-serif;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 10px;
+}
+
+.ya-te-enamoraste img {
+	width: 100%;
+	height: 50vw;
+}
+
+.datos {
+	display: inline-flex;
+	padding: 1vw;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	height: auto;
+	background-color: #ff009a;
+	color: white;
+	font-weight: bold;
+	grid-area: datos;
+}
+
+.datos h2 {
+	margin-bottom: 2vw;
+	font-family: "Montserrat", sans-serif;
+	font-size: 30px;
+}
+
+.box {
+	justify-content: center;
+	align-items: center;
+	padding: 1vw;
+	font-size: 30px;
+}
+
+.numero {
+	border: solid 2px white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 10vw;
+}
+
+footer {
+	background-color: lightgray;
+	display: block;
+	font-family: "Montserrat", sans-serif;
+	grid-area: footer;
+	width: auto;
+	height: auto;
+}
+
+footer h3 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+.redesociales {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.redesociales i {
+	padding: 10px;
+	font-size: 20px;
+}
+
+.frase {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+.video {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.info {
+	display: inline-flex;
+	width: auto;
+	height: auto;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	grid-area: info;
+}
+
+.subtitulo {
+	justify-content: space-between;
+	align-items: center;
+	height: 15vw;
+}
+
+.subtitulo h2 {
+	padding: 2px;
+}
+
+.subtitulo p {
+	padding: 5px;
+}
+
+.info-preguntas {
+	display: inline-flex;
+	width: 100%;
+	height: 20vw;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+	background-color: bisque;
+	color: black;
+}
+
+.convencido {
+	background-color: bisque;
+	color: black;
+	padding-bottom: 2vw;
+}
+
+form {
+	margin-left: 2vw ;
+}
+
+form input {
+	margin-top: 1vw;
+    margin-bottom: 1vw;
+    display: block;
+}
+
+form select, textarea {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.elegir {
+	display: inline-block;
+}
+
+.info-oportunidad {
+	display: inline-flex;
+	width: 100%;
+	height: 30vw;
+	justify-content: space-around;
+	align-items: center;
+	margin-top: 20px;
+}
+
+@media(max-width:576px) {
+	body {
+		width: auto;
+		height: auto;
+	}
+
+	header {
+		width: auto;
+	}
+
+	.index-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"header"
+		"nombre-pagina"
+		"inicio-final"
+		"portada"
+		"datos"
+		"inicio-final2"
+		"footer";
+	}	
+
+	.nosotros-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"header"
+		"nombre-pagina"
+		"inicio-final"
+		"portada-nosotrs"
+		"info"
+		"inicio-final2"
+		"footer";
+	}	
+
+	.portada img {
+		height: 70vw;
+	}
+	
+	.datos h2{
+		font-size: 20px;
+	}
+
+	.nosotros-content {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas: 
+		"header"
+		"nombre-pagina"
+		"inicio-final"
+		"portada-nosotros"
+		"info"
+		"ya-te-enamoraste"
+		"inicio-final2"
+		"footer";
+	}	
+
+	.info {
+		padding-left: 5vw;
+		padding-bottom: 25vw;
+	}
+}
