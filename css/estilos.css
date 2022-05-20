@@ -91,6 +91,17 @@ header ul li a:hover {
 	grid-area: inicio-final;
 	height: auto;
 	width: auto;
+	display: flex;
+}
+
+.boton {
+	width: auto;
+}
+
+.boton:hover {
+	transform: scale(1.3);
+	transition-property: all;
+	transition-duration: 0.3s;
 }
 
 .inicio-final a{
@@ -98,6 +109,7 @@ header ul li a:hover {
 	color: black;
 	font-size: 20px;
 	cursor: pointer;
+	width: auto;
 }
 
 .inicio-final a:hover {
@@ -109,6 +121,17 @@ header ul li a:hover {
 .inicio-final2 {
 	margin: 2vw;
 	grid-area: inicio-final2;
+	display: flex;
+}
+
+.boton2 {
+	width: auto;
+}
+
+.boton2:hover {
+	transform: scale(1.3);
+	transition-property: all;
+	transition-duration: 0.3s;
 }
 
 .inicio-final2 a{
