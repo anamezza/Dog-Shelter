@@ -1,3 +1,15 @@
+@mixin tamanio ($ancho, $altura) {
+	width: $ancho;
+	height: $altura;
+}
+
+$estilos: (
+	cursor: pointer,
+	negrita: bold,
+	cursiva: italic,
+	letra: "Montserrat sans-serif"
+);
+
 * {
 	margin: 0;
 	padding: 0;
@@ -39,11 +51,10 @@ body {
 
 header {
 	background-color: white;
-	height: auto;
-	width: 100%;
+	@include tamanio (100%, auto);
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	font-weight: bold;
+	font-weight: map-get($estilos , negrita);
 	grid-area: header;
 	ul {
 		list-style: none;
@@ -54,7 +65,7 @@ header {
 				text-decoration: none;
 				color: black;
 				padding: 0.3vw;
-				cursor: pointer;
+				cursor: map-get($estilos , cursor);
 				&:hover {
 					color: #818181;
 					opacity: 0.6;
@@ -67,8 +78,7 @@ header {
 
 
 .nombre-pagina {
-	width: auto;
-	height: auto;
+	@include tamanio (auto, auto);
 	padding: 2vw;
 	display: flex;
 	justify-content: center;
@@ -76,17 +86,16 @@ header {
 	background-color: #ff009a;
 	grid-area: nombre-pagina;
 	h1 {
-		font-weight: bold;
+		font-weight: map-get($estilos , negrita);
 		color: white;
-		font-family: "Montserrat", sans-serif;
+		font-family: "Montserrat sans-serif";
 	}
 }
 
 .inicio-final {
 	margin: 2vw;
 	grid-area: inicio-final;
-	height: auto;
-	width: auto;
+	@include tamanio (auto, auto)
 	display: flex;
 	.boton {
 		width: auto;
@@ -99,7 +108,7 @@ header {
 			text-decoration: none;	
 			color: black;
 			font-size: 20px;
-			cursor: pointer;
+			cursor: map-get($estilos , cursor);
 			width: auto;
 			&:hover {
 				color: #818181;
@@ -111,9 +120,8 @@ header {
 }
 
 .inicio-final2 {
-	margin: 2vw;
+	@extend .inicio-final;
 	grid-area: inicio-final2;
-	display: flex;
 	.boton2 {
 		width: auto;
 		&:hover {
@@ -125,7 +133,7 @@ header {
 			text-decoration: none;	
 			color: black;
 			font-size: 20px;
-			cursor: pointer;
+			cursor: map-get($estilos , cursor);
 			&:hover {
 				color: #818181;
 				opacity: 0.6;
@@ -136,12 +144,10 @@ header {
 }
 
 .portada {
-	width: 100%;
+	@include tamanio (100%, auto);
 	grid-area: portada;
-	height: auto;
 	img {
-		width: 100%;
-		height: 40vw;
+		@include tamanio (100%, 40vw);
 	}
 }
 
@@ -149,31 +155,28 @@ header {
 	width: 100%;
 	grid-area: portada-nosotros;
 	h2 {
-		font-family: "Montserrat", sans-serif;
+		font-family: map-get($estilos , letra);
 		margin-top: 20px;
 		margin-bottom: 20px;
 		margin-left: 10px;
 	}
 	img {
-		width: 100%;
-		height: 50vw;
+		@include tamanio (100%, 50vw);
 	}
 }
 
 .ya-te-enamoraste {
-	width: 100%;
-	height: auto;
+	@include tamanio (100%, auto);
 	grid-area: ya-te-enamoraste;
 	height: auto;
 	h2 {
-		font-family: "Montserrat", sans-serif;
+		font-family: map-get($estilos , letra);
 		margin-top: 20px;
 		margin-bottom: 20px;
 		margin-left: 10px;
 	}
 	img {
-		width: 100%;
-		height: 50vw;
+		@include tamanio (100%, 50vw);
 	}
 }
 
@@ -182,11 +185,10 @@ header {
 	padding: 1vw;
 	justify-content: center;
 	align-items: center;
-	width: auto;
-	height: auto;
+	@include tamanio (auto, auto);
 	background-color: #ff009a;
 	color: white;
-	font-weight: bold;
+	font-weight: map-get($estilos , negrita);
 	grid-area: datos;
 	.box {
 		justify-content: center;
@@ -195,7 +197,7 @@ header {
 		font-size: 30px;
 		h2 {
 			margin-bottom: 2vw;
-			font-family: "Montserrat", sans-serif;
+			font-family: map-get($estilos , letra);
 			font-size: 30px;
 		}
 		.numero {
@@ -212,10 +214,9 @@ header {
 footer {
 	background-color: lightgray;
 	display: block;
-	font-family: "Montserrat", sans-serif;
+	font-family: map-get($estilos , letra);
 	grid-area: footer;
-	width: auto;
-	height: auto;
+	@include tamanio (auto, auto);
 	h3 {
 		display: flex;
 		justify-content: center;
@@ -233,11 +234,9 @@ footer {
 		}
 	}
 	.frase {
-		display: flex;
-		justify-content: center;
-		align-items: center;
+		@extend .redesociales;
 		padding: 10px;
-		height: auto;
+
 	}
 }
 
@@ -249,8 +248,7 @@ footer {
 
 .info {
 	display: inline-flex;
-	width: auto;
-	height: auto;
+	@include tamanio (auto, auto);
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 2vw;
@@ -272,8 +270,7 @@ footer {
 }
 
 .info-preguntas {
-	width: 100%;
-	height: auto;
+	@include tamanio (100%, auto);
 	color: black;
 	display: inline-flex;
 	justify-content: space-between;
@@ -283,8 +280,7 @@ footer {
 		justify-content: center;
 		align-items: center;
 		border: 2px solid black;
-		height: 8vw;
-		width: auto;
+		@include tamanio (auto, 8vw);
 		padding: 1vw;
 		margin-left: 1vw;
 		margin-top: 1vw;
@@ -301,9 +297,9 @@ footer {
 .convencido {
 	margin-top: 2vw;
 	color: grey;
-	font-weight: bold;
+	font-weight: map-get($estilos , negrita);
 	margin: 1vw;
-	font-style: italic;
+	font-style: map-get($estilos , cursiva);
 	height: auto;
 }
 
@@ -326,8 +322,7 @@ form {
 
 .info-oportunidad {
 	display: inline-flex;
-	width: 100%;
-	height: 30vw;
+	@include tamanio (100%, 30vw);
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 20px;
@@ -335,8 +330,7 @@ form {
 
 @media(max-width:576px) {
 	body {
-		width: auto;
-		height: auto;
+		@include tamanio (auto, auto);
 	}
 
 	header {
