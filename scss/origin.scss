@@ -152,16 +152,32 @@ header {
 }
 
 .portada-nosotros {
+	background-image: url(../assets/perroconpelota.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
 	width: 100%;
+	height: auto;
 	grid-area: portada-nosotros;
-	h2 {
-		font-family: map-get($estilos , letra);
-		margin-top: 20px;
-		margin-bottom: 20px;
-		margin-left: 10px;
-	}
-	img {
-		@include tamanio (100%, 50vw);
+	.franja {
+		float: right;
+		margin: 1vw;
+		background-color: rgba(246, 138, 218, 0.5);
+		.concepto {
+			@include tamanio (40vw, auto)
+			overflow-wrap: break-word;
+			padding: 2vw;
+			.categoria {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				h2 {
+					color: #942A79;
+				}
+		}
+			.texto {
+				color: white;
+			}
+		}
 	}
 }
 
@@ -303,6 +319,11 @@ footer {
 	height: auto;
 }
 
+.fondoPantalla {
+	background: url(https://membre.empruntemontoutou.com/img/login.e4e00af2.jpg) 0 0 no-repeat;
+	padding-bottom: 0.1vw;
+}
+
 form {
 	margin-left: 2vw ;
 	input {
@@ -321,11 +342,38 @@ form {
 }
 
 .info-oportunidad {
+	background-color: #FADBF2;
 	display: inline-flex;
-	@include tamanio (100%, 30vw);
+	@include tamanio (100%, 32vw);
 	justify-content: space-around;
 	align-items: center;
 	margin-top: 20px;
+	.subtitulo {
+		@include tamanio (50%, 100%)
+		border: 1px black solid;
+		.bloqueOpor {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			.nameSub {
+				margin-right: 2vw;
+				margin-top: 1vw;
+				display: flex;
+			}
+			.buttonOpor {
+				a {
+					text-decoration: none;
+					color: #ff009a
+				}
+			}
+		}
+		.preguntasOpor {
+			width: 75%;
+			margin-left: 6vw;
+		}
+
+	}
+
 }
 
 @media(max-width:576px) {
@@ -388,5 +436,20 @@ form {
 	.info {
 		padding-left: 5vw;
 		padding-bottom: 25vw;
+	}
+
+	.info-preguntas {
+		.subtitulo2{
+			padding: 0;
+			h2 {
+				font-size: 8px;
+			}
+		}
+	}
+
+	.portada-nosotros {
+		.franja {
+			float: left;
+		}
 	}
 }
