@@ -56,6 +56,10 @@ header {
 	letter-spacing: 1px;
 	font-weight: map-get($estilos , negrita);
 	grid-area: header;
+	button {
+		margin-top: 0.5vw;
+		height: 3.5vw;
+	}
 	ul {
 		list-style: none;
 		li {
@@ -184,15 +188,22 @@ header {
 .ya-te-enamoraste {
 	@include tamanio (100%, auto);
 	grid-area: ya-te-enamoraste;
-	height: auto;
+	container-cards {
+		display: block;
+		.card {
+			img {
+				width: 1vw;
+				height: 1vw;
+			}
+			margin: 2vw;
+			width: auto;
+		}
+	}
 	h2 {
 		font-family: map-get($estilos , letra);
 		margin-top: 20px;
 		margin-bottom: 20px;
 		margin-left: 10px;
-	}
-	img {
-		@include tamanio (100%, 50vw);
 	}
 }
 
@@ -307,6 +318,10 @@ footer {
 			height: auto;
 			font-size: 20px;
 		}
+		a {
+			text-decoration: none;
+			color: white;
+		}
 	}
 }
 
@@ -374,6 +389,26 @@ form {
 
 	}
 
+}
+
+.video {
+	background-color: #1E1C1D;
+	margin-bottom: 2vw;
+	iframe {
+		margin-top: 1vw;
+		margin-bottom: 1vw;
+	}
+}
+
+.respuestas {
+	margin: 2vw;
+	div {
+		margin-bottom: 3vw;
+	}
+	h2 {
+		padding-bottom: 1vw;
+		font-size: 2vw;
+	}
 }
 
 @media(max-width:576px) {
