@@ -135,9 +135,14 @@ header {
 .ya-te-enamoraste {
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: center;
   grid-area: ya-te-enamoraste; }
   .ya-te-enamoraste container-cards {
-    display: block; }
+    margin-top: 40px;
+    display: flex; }
     .ya-te-enamoraste container-cards .card {
       margin: 2vw;
       width: auto; }
@@ -148,6 +153,7 @@ header {
     font-family: "Montserrat sans-serif";
     margin-top: 20px;
     margin-bottom: 20px;
+    align-items: left;
     margin-left: 10px; }
 
 .datos {

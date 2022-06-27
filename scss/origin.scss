@@ -187,9 +187,14 @@ header {
 
 .ya-te-enamoraste {
 	@include tamanio (100%, auto);
+	display: flex;
+	flex-direction: row;
+   	align-items: stretch;
+	justify-content: center;
 	grid-area: ya-te-enamoraste;
 	container-cards {
-		display: block;
+		margin-top: 40px;
+		display: flex;
 		.card {
 			img {
 				width: 1vw;
@@ -203,7 +208,9 @@ header {
 		font-family: map-get($estilos , letra);
 		margin-top: 20px;
 		margin-bottom: 20px;
+		align-items: left; 
 		margin-left: 10px;
+
 	}
 }
 
