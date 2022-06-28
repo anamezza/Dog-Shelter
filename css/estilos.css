@@ -135,26 +135,19 @@ header {
 .ya-te-enamoraste {
   width: 100%;
   height: auto;
+  margin-top: 1vw;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   align-items: stretch;
   justify-content: center;
   grid-area: ya-te-enamoraste; }
-  .ya-te-enamoraste container-cards {
-    margin-top: 40px;
-    display: flex; }
-    .ya-te-enamoraste container-cards .card {
-      margin: 2vw;
-      width: auto; }
-      .ya-te-enamoraste container-cards .card img {
-        width: 1vw;
-        height: 1vw; }
-  .ya-te-enamoraste h2 {
-    font-family: "Montserrat sans-serif";
-    margin-top: 20px;
-    margin-bottom: 20px;
-    align-items: left;
-    margin-left: 10px; }
+  .ya-te-enamoraste container-cards .card {
+    margin: 2vw;
+    width: auto; }
+    .ya-te-enamoraste container-cards .card img {
+      width: 1vw;
+      height: 1vw; }
 
 .datos {
   display: inline-flex;

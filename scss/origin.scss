@@ -185,16 +185,17 @@ header {
 	}
 }
 
+
 .ya-te-enamoraste {
 	@include tamanio (100%, auto);
+	margin-top: 1vw;
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
    	align-items: stretch;
 	justify-content: center;
 	grid-area: ya-te-enamoraste;
 	container-cards {
-		margin-top: 40px;
-		display: flex;
 		.card {
 			img {
 				width: 1vw;
@@ -204,14 +205,7 @@ header {
 			width: auto;
 		}
 	}
-	h2 {
-		font-family: map-get($estilos , letra);
-		margin-top: 20px;
-		margin-bottom: 20px;
-		align-items: left; 
-		margin-left: 10px;
-
-	}
+	
 }
 
 .datos {
